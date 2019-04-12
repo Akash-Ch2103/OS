@@ -22,11 +22,42 @@ System.out.println();
 for(i=0;i<n;i++)
 {
 System.out.println("P[" + i + "]");
-System.out.println("Enter arrival time:");
+System.out.println("Arrival time:");
 at[i]=sc.nextInt();
-System.out.println("Enter burst time:");
+System.out.println("Burst time:");
 bt[i]=sc.nextInt();
+System.out.println();
 p[i]=i+1;
 }
+
+for(i=0;i<n;i++)
+{
+pos=i;
+for(j=i+1;j<n;j++)
+{
+if(at[j]<at[pos])
+pos=j;
+}
+temp=at[i];
+at[i]=at[pos];
+at[pos]=temp;
+
+int temp1=bt[i];
+bt[i]=bt[pos];
+bt[pos]=temp1;
+
+int temp2=p[i];
+p[i]=p[pos];
+p[pos]=temp2;
+}
+
+System.out.println("Process\t    Arrival time    \tBurst time    \tWaiting time");
+for(i=0;i<n;i++)
+{
+System.out.println(p[i]+"\t\t"+at[i]+"\t\t    "+bt[i]);
+}
+
+
+
 
 }}
