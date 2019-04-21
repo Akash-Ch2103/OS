@@ -49,7 +49,7 @@ bt[min]--;
 if(bt[min]==0)
 {
 count++;
-end=time+1;
+end=time+1+3;
 completion[min] = end;
 waiting[min] = end - at[min] - x[min];
 turnaround[min] = end - at[min];
