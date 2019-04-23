@@ -29,6 +29,13 @@ System.out.println("Arrival time:");
 at[i]=sc.nextInt();
 System.out.println("Burst time:");
 bt[i]=sc.nextInt();
+
+if(bt[i]>10)
+{
+System.out.println("CPU can't be alloted more than 10 times...");
+return;
+}
+
 System.out.println();
 p[i]=i+1;
 }
@@ -37,11 +44,6 @@ for(i=0;i<n;i++)
 x[i]=bt[i];
 
 bt[9]=90;
-
-for(int tm=0;tm<n;tm++)
-{
-if(x[tm]<=10)
-{
 
 for(time=0;count!=n;time++)
 {
@@ -73,10 +75,4 @@ System.out.println();
 System.out.println("Average waiting time : "+avg_wt/n);
 System.out.println("Average turnaround time : "+avg_tat/n);
 
-}
-
-else
-{
-System.out.println("CPU can't be alloted more than 10 times...");
-}}
 }}
