@@ -37,6 +37,12 @@ for(i=0;i<n;i++)
 x[i]=bt[i];
 
 bt[9]=90;
+
+for(int tm=0;tm<n;tm++)
+{
+if(x[tm]<=10)
+{
+
 for(time=0;count!=n;time++)
 {
 min=9;
@@ -67,4 +73,10 @@ System.out.println();
 System.out.println("Average waiting time : "+avg_wt/n);
 System.out.println("Average turnaround time : "+avg_tat/n);
 
+}
+
+else
+{
+System.out.println("CPU can't be alloted more than 10 times...");
+}}
 }}
